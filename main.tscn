@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc3tp0c0v33qd"]
+[gd_scene load_steps=6 format=3 uid="uid://bc3tp0c0v33qd"]
 
 [ext_resource type="PackedScene" uid="uid://d1dmj2usunjbj" path="res://player.tscn" id="1_0ihef"]
 [ext_resource type="PackedScene" uid="uid://hfdv3trg3yoc" path="res://ghost_big.tscn" id="2_6sq6a"]
 [ext_resource type="PackedScene" uid="uid://dmgk6ryi1ctgs" path="res://ghost_small_1.tscn" id="3_bnmd6"]
 [ext_resource type="PackedScene" uid="uid://cswid0u0gh5ed" path="res://ghost_small_2.tscn" id="4_tfu1c"]
+[ext_resource type="PackedScene" uid="uid://2nni2ciffg2e" path="res://dialogue.tscn" id="5_oc1nm"]
 
 [node name="Main" type="Node2D"]
 
@@ -18,3 +19,5 @@ position = Vector2(21, 20)
 
 [node name="ghost_small2" parent="." instance=ExtResource("4_tfu1c")]
 position = Vector2(21, 64)
+
+[node name="Dialogue" parent="." instance=ExtResource("5_oc1nm")]
