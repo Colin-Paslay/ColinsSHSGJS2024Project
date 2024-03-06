@@ -13,10 +13,18 @@ config_version=5
 config/name="ColinsSHSGJS2024Project"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+run/max_fps=60
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/image="res://NinjaAdventure/Actor/Characters/Spirit/Faceset.png"
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=160
-window/size/viewport_height=87
+window/size/viewport_width=320
+window/size/viewport_height=168
+window/size/initial_position_type=2
 window/stretch/mode="viewport"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

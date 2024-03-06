@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://hfdv3trg3yoc"]
+
+[ext_resource type="Script" path="res://npc_guy.gd" id="1_uqb60"]
+[ext_resource type="Texture2D" uid="uid://dj64pd6jecd6c" path="res://NinjaAdventure/Actor/Boss/GiantSpirit/Idle.png" id="1_y6s33"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vl463"]
+radius = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nt2ic"]
+atlas = ExtResource("1_y6s33")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjxt8"]
+atlas = ExtResource("1_y6s33")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_grb0n"]
+atlas = ExtResource("1_y6s33")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_va4f8"]
+atlas = ExtResource("1_y6s33")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rycd"]
+atlas = ExtResource("1_y6s33")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ip3qi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nt2ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjxt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_grb0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_va4f8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rycd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="GhostBig" type="CharacterBody2D"]
+script = ExtResource("1_uqb60")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_vl463")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ip3qi")
+frame_progress = 0.629239
