@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://d1dmj2usunjbj"]
+[gd_scene load_steps=22 format=3 uid="uid://d1dmj2usunjbj"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_0u67p"]
 [ext_resource type="Texture2D" uid="uid://cg88yvn1jl5mm" path="res://NinjaAdventure/Actor/Characters/Spirit/SpriteSheet.png" id="1_ycov0"]
@@ -141,13 +141,26 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvhkk"]
+size = Vector2(14, 3)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_0u67p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dbqnj")
+disabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jur36")
 animation = &"WalkingForward"
 frame_progress = 0.467711
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 16)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_hvhkk")

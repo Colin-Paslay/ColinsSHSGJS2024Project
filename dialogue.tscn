@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://brn7cn53oxx4s" path="res://NinjaAdventure/HUD/Dialog/DialogBoxFaceset.png" id="1_odrva"]
 [ext_resource type="FontFile" uid="uid://db4gm8dgrclet" path="res://NinjaAdventure/HUD/Font/pixel-dungeons.ttf" id="2_8edlb"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ylynq"]
-line_spacing = 2.0
+[sub_resource type="LabelSettings" id="LabelSettings_5cooi"]
 font = ExtResource("2_8edlb")
 font_size = 8
 font_color = Color(0, 0, 0, 1)
@@ -17,15 +16,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DialogBoxFaceset" type="Sprite2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogBoxFaceset" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(160, 138)
 texture = ExtResource("1_odrva")
 
-[node name="Label" type="Label" parent="DialogBoxFaceset"]
+[node name="Label" type="Label" parent="CanvasLayer/DialogBoxFaceset"]
 offset_left = -99.0
-offset_top = -15.0
-offset_right = 144.0
-offset_bottom = 23.0
+offset_top = -14.0
+offset_right = 143.0
+offset_bottom = 22.0
 text = "Testing Testing"
-label_settings = SubResource("LabelSettings_ylynq")
-autowrap_mode = 3
+label_settings = SubResource("LabelSettings_5cooi")

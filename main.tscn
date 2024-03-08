@@ -8,9 +8,6 @@
 
 [node name="Main" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_0ihef")]
-position = Vector2(87, 10)
-
 [node name="GhostBig" parent="." instance=ExtResource("2_6sq6a")]
 position = Vector2(66, 44)
 
@@ -19,5 +16,8 @@ position = Vector2(21, 20)
 
 [node name="ghost_small2" parent="." instance=ExtResource("4_tfu1c")]
 position = Vector2(21, 64)
+
+[node name="Player" parent="." instance=ExtResource("1_0ihef")]
+position = Vector2(87, 10)
 
 [node name="Dialogue" parent="." instance=ExtResource("5_oc1nm")]
