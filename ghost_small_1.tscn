@@ -151,3 +151,5 @@ shape = SubResource("RectangleShape2D_0sx3m")
 sprite_frames = SubResource("SpriteFrames_cs6ot")
 animation = &"Right"
 frame_progress = 0.555353
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
