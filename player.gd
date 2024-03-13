@@ -1,8 +1,6 @@
 extends CharacterBody2D
 
 const SPEED = 64.0
-var rcTarget = Vector2(0, 16)
-signal interact()
 
 func _physics_process(delta):
 	var directionx = Input.get_axis("ui_left", "ui_right")
@@ -11,22 +9,22 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("WalkingForward")
 		velocity.y = directiony * SPEED
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		rcTarget = Vector2(0,16)
+		$RayCast2D.target_position = Vector2(0,16)
 	elif directiony < 0: 
 		$AnimatedSprite2D.play("WalkingBackward")
 		velocity.y = directiony * SPEED
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		rcTarget = Vector2(0,-16)
+		$RayCast2D.target_position = Vector2(0,-16)
 	elif directionx < 0: 
 		$AnimatedSprite2D.play("WalkingLeft")
 		velocity.x = directionx * SPEED
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-		rcTarget = Vector2(16,0)
+		$RayCast2D.target_position = Vector2(-16,0)
 	elif directionx > 0: 
 		$AnimatedSprite2D.play("WalkingRight")
 		velocity.x = directionx * SPEED
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-		rcTarget = Vector2(-16,0)
+		$RayCast2D.target_position = Vector2(16,0)
 	else: 
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
@@ -34,10 +32,6 @@ func _physics_process(delta):
 	move_and_slide()
 func _input(event):
 	if event.is_action_pressed("Interact"):
-		var space_rid = get_world_2d().space
-		var space_state = PhysicsServer2D.space_get_direct_state(space_rid)
-		var query = PhysicsRayQueryParameters2D.create(Vector2(0,0), rcTarget)
-		query.exclude[self]
-		var result = space_state.intersect_ray(query)
-		print(result.collider_id)
-		interact.emit(result.collider_id)
+		var result = $RayCast2D.get_collider()
+		if result:
+			pass #use singleton as a hub that can tell nodes when they should run interact script

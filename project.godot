@@ -18,6 +18,10 @@ boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/image="res://NinjaAdventure/Actor/Characters/Spirit/Faceset.png"
 config/icon="res://icon.svg"
 
+[autoload]
+
+InteractHandler="*res://interact_handler.gd"
+
 [display]
 
 window/size/viewport_width=320
