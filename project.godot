@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-InteractHandler="*res://interact_handler.gd"
+InteractHandler="*res://InteractHandler.gd"
 
 [display]
 

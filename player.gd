@@ -32,6 +32,7 @@ func _physics_process(delta):
 	move_and_slide()
 func _input(event):
 	if event.is_action_pressed("Interact"):
-		var result = $RayCast2D.get_collider()
-		if result:
-			pass #use singleton as a hub that can tell nodes when they should run interact script
+		InteractHandler.result = $RayCast2D.get_collider_rid()
+		if InteractHandler.result:
+			return InteractHandler.result
+			
