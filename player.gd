@@ -33,6 +33,5 @@ func _physics_process(delta):
 func _input(event):
 	if event.is_action_pressed("Interact"):
 		InteractHandler.result = $RayCast2D.get_collider_rid()
-		if InteractHandler.result:
-			return InteractHandler.result
-			
+		InteractHandler.interactBool = true
+		print(InteractHandler.result)

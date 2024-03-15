@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://2nni2ciffg2e"]
+[gd_scene load_steps=6 format=3 uid="uid://2nni2ciffg2e"]
 
+[ext_resource type="Script" path="res://dialog.gd" id="1_m5082"]
 [ext_resource type="Texture2D" uid="uid://brn7cn53oxx4s" path="res://NinjaAdventure/HUD/Dialog/DialogBoxFaceset.png" id="1_odrva"]
 [ext_resource type="FontFile" uid="uid://db4gm8dgrclet" path="res://NinjaAdventure/HUD/Font/pixel-dungeons.ttf" id="2_8edlb"]
+[ext_resource type="Texture2D" uid="uid://n5gk0pksgot" path="res://NinjaAdventure/Actor/Characters/Spirit/Faceset.png" id="4_0xbu0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5cooi"]
 font = ExtResource("2_8edlb")
@@ -15,17 +17,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_m5082")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogBoxFaceset" type="Sprite2D" parent="CanvasLayer"]
+visible = false
 position = Vector2(160, 138)
 texture = ExtResource("1_odrva")
 
-[node name="Label" type="Label" parent="CanvasLayer/DialogBoxFaceset"]
+[node name="DialogBox" type="Label" parent="CanvasLayer/DialogBoxFaceset"]
 offset_left = -99.0
 offset_top = -14.0
 offset_right = 143.0
 offset_bottom = 22.0
 text = "Testing Testing"
 label_settings = SubResource("LabelSettings_5cooi")
+
+[node name="Facebox" type="Sprite2D" parent="CanvasLayer/DialogBoxFaceset"]
+position = Vector2(-125, 4)
+texture = ExtResource("4_0xbu0")

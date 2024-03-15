@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://hfdv3trg3yoc" path="res://ghost_big.tscn" id="2_6sq6a"]
 [ext_resource type="PackedScene" uid="uid://dmgk6ryi1ctgs" path="res://ghost_small_1.tscn" id="3_bnmd6"]
 [ext_resource type="PackedScene" uid="uid://cswid0u0gh5ed" path="res://ghost_small_2.tscn" id="4_tfu1c"]
-[ext_resource type="PackedScene" uid="uid://2nni2ciffg2e" path="res://dialogue.tscn" id="5_oc1nm"]
+[ext_resource type="PackedScene" uid="uid://2nni2ciffg2e" path="res://dialog.tscn" id="5_oc1nm"]
 
 [node name="Main" type="Node2D"]
 
@@ -21,3 +21,4 @@ position = Vector2(21, 64)
 position = Vector2(87, 10)
 
 [node name="Dialogue" parent="." instance=ExtResource("5_oc1nm")]
+visible = false
