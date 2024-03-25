@@ -34,4 +34,5 @@ func _input(event):
 	if event.is_action_pressed("Interact"):
 		InteractHandler.result = $RayCast2D.get_collider_rid()
 		InteractHandler.interactBool = true
-		print(InteractHandler.result)
+		if str(InteractHandler.result) == "RID(0)":
+			InteractHandler.talkingHead = "None"

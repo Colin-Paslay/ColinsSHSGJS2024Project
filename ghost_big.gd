@@ -5,7 +5,7 @@ func _ready():
 	$AnimatedSprite2D.play("default")
 
 func _process(delta):
-	if str(InteractHandler.result) == "RID(4058744094720)" and stage == 'hello': 
+	if str(InteractHandler.result) == str(self.get_rid()) and stage == 'hello': 
 		InteractHandler.interactBool = false
 		InteractHandler.talkingHead = "Big Ghost"
 		InteractHandler.dialogState = true
