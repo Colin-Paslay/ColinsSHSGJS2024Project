@@ -6,6 +6,10 @@ func _process(delta):
 		$CanvasLayer/DialogBoxFaceset.show()
 	if InteractHandler.talkingHead == "None":
 		$CanvasLayer/DialogBoxFaceset.hide()
+	elif InteractHandler.talkingHead == "System":
+		faceset = load("res://NinjaAdventure/Actor/Characters/Spirit/Faceset.png")
+		$CanvasLayer/DialogBoxFaceset/DialogBox.set_text("Key Get!")
+		$CanvasLayer/DialogBoxFaceset/Facebox.set_texture(faceset)
 	elif InteractHandler.talkingHead == "Big Ghost":
 		faceset = load("res://NinjaAdventure/Actor/Boss/GiantSpirit/Faceset.png")
 		$CanvasLayer/DialogBoxFaceset/DialogBox.set_text("The Muffin Man?")
