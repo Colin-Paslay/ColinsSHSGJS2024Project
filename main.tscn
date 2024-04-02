@@ -12937,7 +12937,7 @@ position = Vector2(32, -19)
 position = Vector2(-35, -19)
 
 [node name="Player" parent="." instance=ExtResource("1_0ihef")]
-position = Vector2(-108, 12)
+position = Vector2(0, 12)
 
 [node name="Dialogue" parent="." instance=ExtResource("5_oc1nm")]
 visible = false

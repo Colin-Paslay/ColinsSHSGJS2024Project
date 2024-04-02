@@ -36,3 +36,5 @@ func _input(event):
 		InteractHandler.interactBool = true
 		if str(InteractHandler.result) == "RID(0)":
 			InteractHandler.talkingHead = "None"
+	if event.is_action_pressed("LeftClick"):
+		$".".position = get_global_mouse_position()
