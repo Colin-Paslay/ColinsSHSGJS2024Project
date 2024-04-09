@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://ba7dtbg827v1k"]
+
+[ext_resource type="Texture2D" uid="uid://cb0m1x0dubqf5" path="res://NinjaAdventure/Actor/Characters/Child/SpriteSheet.png" id="1_x3tux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_choqv"]
+atlas = ExtResource("1_x3tux")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csvb8"]
+atlas = ExtResource("1_x3tux")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjcwl"]
+atlas = ExtResource("1_x3tux")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov4w0"]
+atlas = ExtResource("1_x3tux")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jjni"]
+atlas = ExtResource("1_x3tux")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hxr3"]
+atlas = ExtResource("1_x3tux")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ga02"]
+atlas = ExtResource("1_x3tux")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fveqh"]
+atlas = ExtResource("1_x3tux")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7e0qn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_choqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csvb8")
+}],
+"loop": true,
+"name": &"backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjcwl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov4w0")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jjni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hxr3")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ga02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fveqh")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_im4o1"]
+size = Vector2(14, 14)
+
+[node name="Child" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7e0qn")
+animation = &"backward"
+frame_progress = 0.547356
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_im4o1")
