@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://bc3tp0c0v33qd"]
+[gd_scene load_steps=99 format=3 uid="uid://bc3tp0c0v33qd"]
 
 [ext_resource type="PackedScene" uid="uid://d1dmj2usunjbj" path="res://player.tscn" id="1_0ihef"]
 [ext_resource type="Texture2D" uid="uid://bdh0e8smtxuh0" path="res://NinjaAdventure/Backgrounds/Tilesets/TilesetField.png" id="1_3jtl7"]
@@ -32,6 +32,22 @@
 [ext_resource type="Texture2D" uid="uid://c0tcdsfhqivx6" path="res://NinjaAdventure/Backgrounds/Vehicles/FishNetFull.png" id="23_kbg1o"]
 [ext_resource type="Texture2D" uid="uid://d0injpdf3i8d" path="res://NinjaAdventure/Backgrounds/Vehicles/Sail.png" id="24_ncysf"]
 [ext_resource type="PackedScene" uid="uid://c7oahisvmjddn" path="res://big_chest.tscn" id="32_er4u6"]
+[ext_resource type="PackedScene" uid="uid://def8ji03cfpwc" path="res://woman.tscn" id="33_qtwuq"]
+[ext_resource type="PackedScene" uid="uid://nyoabtllrswt" path="res://villager.tscn" id="34_e8s65"]
+[ext_resource type="PackedScene" uid="uid://bm5uvkosgjqgc" path="res://priest.tscn" id="35_gma1r"]
+[ext_resource type="PackedScene" uid="uid://ba7dtbg827v1k" path="res://child.tscn" id="36_2fq61"]
+[ext_resource type="PackedScene" uid="uid://clxmlsm6315cc" path="res://boy.tscn" id="37_lv4ob"]
+[ext_resource type="PackedScene" uid="uid://cmbe5yt6l542f" path="res://2_illager.tscn" id="38_xqvyf"]
+[ext_resource type="PackedScene" uid="uid://bwhx0evkkerpt" path="res://2_ldman.tscn" id="39_i6p0o"]
+[ext_resource type="PackedScene" uid="uid://h27fc430fxac" path="res://2_onk.tscn" id="40_n45bs"]
+[ext_resource type="PackedScene" uid="uid://cp8bppivwevvs" path="res://3_illager.tscn" id="41_ure2h"]
+[ext_resource type="PackedScene" uid="uid://bbqqutuiw8req" path="res://4_illager.tscn" id="42_uewtx"]
+[ext_resource type="PackedScene" uid="uid://r6t1l5ai1nnm" path="res://greenman.tscn" id="43_b03j4"]
+[ext_resource type="PackedScene" uid="uid://g546dpu7vey6" path="res://inspector.tscn" id="44_ymcst"]
+[ext_resource type="PackedScene" uid="uid://oth1tgeeq03s" path="res://monk.tscn" id="45_huauk"]
+[ext_resource type="PackedScene" uid="uid://cthypl7bb0f8j" path="res://master.tscn" id="46_gbm2o"]
+[ext_resource type="PackedScene" uid="uid://1n657f3bcprh" path="res://oldman.tscn" id="47_35ybt"]
+[ext_resource type="PackedScene" uid="uid://cyb2a3d7f8kxh" path="res://oldwoman.tscn" id="48_gj3ev"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sibtu"]
 texture = ExtResource("1_3jtl7")
@@ -13247,6 +13263,54 @@ shape = SubResource("RectangleShape2D_omiil")
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(154, 379)
 shape = SubResource("RectangleShape2D_fms03")
+
+[node name="woman" parent="." instance=ExtResource("33_qtwuq")]
+position = Vector2(603, 265)
+
+[node name="villager" parent="." instance=ExtResource("34_e8s65")]
+position = Vector2(168, 275)
+
+[node name="priest" parent="." instance=ExtResource("35_gma1r")]
+position = Vector2(424, 359)
+
+[node name="Child" parent="." instance=ExtResource("36_2fq61")]
+position = Vector2(-11, 146)
+
+[node name="boy" parent="." instance=ExtResource("37_lv4ob")]
+position = Vector2(-1, 167)
+
+[node name="2illager" parent="." instance=ExtResource("38_xqvyf")]
+position = Vector2(270, 360)
+
+[node name="2ldman" parent="." instance=ExtResource("39_i6p0o")]
+position = Vector2(232, 413)
+
+[node name="2onk" parent="." instance=ExtResource("40_n45bs")]
+position = Vector2(168, 391)
+
+[node name="3illager" parent="." instance=ExtResource("41_ure2h")]
+position = Vector2(538, 393)
+
+[node name="4illager" parent="." instance=ExtResource("42_uewtx")]
+position = Vector2(407, 275)
+
+[node name="greenman" parent="." instance=ExtResource("43_b03j4")]
+position = Vector2(812, 169)
+
+[node name="inspector" parent="." instance=ExtResource("44_ymcst")]
+position = Vector2(374, 456)
+
+[node name="monk" parent="." instance=ExtResource("45_huauk")]
+position = Vector2(135, 390)
+
+[node name="master" parent="." instance=ExtResource("46_gbm2o")]
+position = Vector2(680, 409)
+
+[node name="oldman" parent="." instance=ExtResource("47_35ybt")]
+position = Vector2(487, 281)
+
+[node name="oldwoman" parent="." instance=ExtResource("48_gj3ev")]
+position = Vector2(344, 266)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

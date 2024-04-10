@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://cyb2a3d7f8kxh"]
+
+[ext_resource type="Texture2D" uid="uid://dqqxe7sfecfl6" path="res://NinjaAdventure/Actor/Characters/OldWoman/SpriteSheet.png" id="1_ya4wq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_262fq"]
+atlas = ExtResource("1_ya4wq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kf1k"]
+atlas = ExtResource("1_ya4wq")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwrxq"]
+atlas = ExtResource("1_ya4wq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmuch"]
+atlas = ExtResource("1_ya4wq")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7onko"]
+atlas = ExtResource("1_ya4wq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cbc7d"]
+atlas = ExtResource("1_ya4wq")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70ws6"]
+atlas = ExtResource("1_ya4wq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ofwf"]
+atlas = ExtResource("1_ya4wq")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1a0v5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_262fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kf1k")
+}],
+"loop": true,
+"name": &"backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwrxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmuch")
+}],
+"loop": true,
+"name": &"forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7onko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cbc7d")
+}],
+"loop": true,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70ws6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ofwf")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmjum"]
+size = Vector2(15, 14)
+
+[node name="oldwoman" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1a0v5")
+animation = &"forward"
+frame_progress = 0.350591
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_wmjum")
