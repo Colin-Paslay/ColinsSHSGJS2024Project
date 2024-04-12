@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://bm5uvkosgjqgc"]
+[gd_scene load_steps=26 format=3 uid="uid://bm5uvkosgjqgc"]
 
+[ext_resource type="Script" path="res://priest.gd" id="1_e0nsb"]
 [ext_resource type="Texture2D" uid="uid://dc54gjrn47iel" path="res://NinjaAdventure/Actor/Characters/Noble/SpriteSheet.png" id="1_gjyob"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_418m2"]
@@ -166,9 +167,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gevf"]
-size = Vector2(16, 16)
+size = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xlo3"]
 
 [node name="priest" type="CharacterBody2D"]
+script = ExtResource("1_e0nsb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_l4idx")
@@ -177,3 +181,8 @@ frame_progress = 0.877561
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5gevf")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_3xlo3")

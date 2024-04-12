@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=3 uid="uid://bc3tp0c0v33qd"]
+[gd_scene load_steps=98 format=3 uid="uid://bc3tp0c0v33qd"]
 
 [ext_resource type="PackedScene" uid="uid://d1dmj2usunjbj" path="res://player.tscn" id="1_0ihef"]
 [ext_resource type="Texture2D" uid="uid://bdh0e8smtxuh0" path="res://NinjaAdventure/Backgrounds/Tilesets/TilesetField.png" id="1_3jtl7"]
@@ -31,7 +31,6 @@
 [ext_resource type="Texture2D" uid="uid://uhwreb45dgid" path="res://NinjaAdventure/Backgrounds/Vehicles/FishNet.png" id="22_f4x4v"]
 [ext_resource type="Texture2D" uid="uid://c0tcdsfhqivx6" path="res://NinjaAdventure/Backgrounds/Vehicles/FishNetFull.png" id="23_kbg1o"]
 [ext_resource type="Texture2D" uid="uid://d0injpdf3i8d" path="res://NinjaAdventure/Backgrounds/Vehicles/Sail.png" id="24_ncysf"]
-[ext_resource type="PackedScene" uid="uid://c7oahisvmjddn" path="res://big_chest.tscn" id="32_er4u6"]
 [ext_resource type="PackedScene" uid="uid://def8ji03cfpwc" path="res://woman.tscn" id="33_qtwuq"]
 [ext_resource type="PackedScene" uid="uid://nyoabtllrswt" path="res://villager.tscn" id="34_e8s65"]
 [ext_resource type="PackedScene" uid="uid://bm5uvkosgjqgc" path="res://priest.tscn" id="35_gma1r"]
@@ -13197,13 +13196,10 @@ position = Vector2(-35, -19)
 
 [node name="Player" parent="." instance=ExtResource("1_0ihef")]
 z_index = 10
-position = Vector2(0, 12)
+position = Vector2(0, 18)
 
 [node name="Dialogue" parent="." instance=ExtResource("5_oc1nm")]
 visible = false
-
-[node name="BigChest" parent="." instance=ExtResource("32_er4u6")]
-position = Vector2(-57, -9)
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
